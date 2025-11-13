@@ -2,6 +2,7 @@ name: Lab 8 DevOps - Tests CI Pipeline
 on: [push, pull_request]
 jobs:
   test:
+    if: github.actor != 'dependabot[bot]'
     runs-on: ubuntu-latest
     strategy:
       matrix:
